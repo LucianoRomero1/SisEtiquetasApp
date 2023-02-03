@@ -6,7 +6,7 @@ export const Footer = () => {
     <>
       <Box role="contentinfo" bg="#000" color="white" className="fixed-bottom">
         <Stack spacing={{ base: "4", md: "5" }} align="center">
-          <Text fontSize="sm" fontWeight="bold">
+          <Text fontSize="xs" fontWeight="bold">
             BASSO S.A &copy; {new Date().getFullYear()} Copyright © - Todos los
             derechos reservados
           </Text>

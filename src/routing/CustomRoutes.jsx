@@ -1,13 +1,12 @@
 import React from "react";
-import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Home } from "../components/pages/Home";
 import { Error } from "../components/pages/Error";
 import { Footer } from "../components/layout/Footer";
 import { Nav } from "../components/layout/Nav";
-import { Placeholder } from "../components/pages/Placeholder";
 import { Box } from "@chakra-ui/react";
-import { Details } from "../components/pages/Details";
-import { PlaceholderTwo } from "../components/pages/PlaceholderTwo";
+import { List } from "../components/pages/tag/List";
+import { Create } from "../components/pages/tag/Create";
 
 export const CustomRoutes = () => {
   return (
@@ -21,9 +20,8 @@ export const CustomRoutes = () => {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/placeholder" element={<Placeholder />} />
-          <Route path="/placeholder2" element={<PlaceholderTwo />} />
-          <Route path="/details" element={<Details />} />
+          <Route path="/tag/list" element={<List />} />
+          <Route path="/tag/create" element={<Create />} />
         </Routes>
       </Box>
 
