@@ -33,7 +33,7 @@ export const Create = () => {
 
   const getClientsAndArticles = async () => {
     const request = await fetch(Global.url + "tag/getClientsAndArticles", {
-      mode: "no-cors",
+      // mode: "no-cors",
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -42,6 +42,7 @@ export const Create = () => {
 
     const data = await request.json();
     //TODO: NO funciona, buscar un video como usar Symfony Y React
+    //TODO: Es por un tema del CORS. En NodeJS lo configuré, en Symfony parece que no
     console.log(data);
   };
 
