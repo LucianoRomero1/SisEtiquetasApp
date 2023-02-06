@@ -1,11 +1,12 @@
 import React from 'react'
 import { Header } from '../../layout/Header'
+import { Nav } from '../../layout/Nav'
 
-export const List = () => {
+export const PrivateLayout = () => {
   return (
-    <div>
+    <>
+        <Nav /> 
         <Header />
-        List
-    </div>
+    </>
   )
 }

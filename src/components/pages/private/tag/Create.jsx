@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Header } from "../../layout/Header";
 import {
   Card,
   CardHeader,
@@ -21,7 +20,7 @@ import {
 } from "@chakra-ui/react";
 import { AttachmentIcon } from "@chakra-ui/icons";
 import { useEffect } from "react";
-import { Global } from "../../../helpers/Global";
+import { Global } from "../../../../helpers/Global";
 
 export const Create = () => {
   const [clients, setClients] = useState([]);
@@ -41,15 +40,12 @@ export const Create = () => {
     });
 
     const data = await request.json();
-    //TODO: NO funciona, buscar un video como usar Symfony Y React
-    //TODO: Es por un tema del CORS. En NodeJS lo configuré, en Symfony parece que no
     console.log(data);
   };
 
   return (
     <div>
-      <Header />
-      <form className="register-form">
+      <form>
         <Card variant="outline" mt="3">
           <CardHeader>
             <Heading size="sm">

@@ -17,7 +17,7 @@ import {
   ViewIcon,
 } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
-import { Home } from "../pages/Home";
+import { Home } from "../pages/private/Home";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
