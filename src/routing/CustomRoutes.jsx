@@ -9,30 +9,29 @@ import { Create } from "../components/pages/private/tag/Create";
 import { Login } from "../components/pages/public/Login";
 import { PublicLayout } from "../components/pages/public/PublicLayout";
 import { PrivateLayout } from "../components/pages/private/PrivateLayout";
+import { AuthProvider } from "../context/AuthProvider";
+import { Nav } from "../components/layout/Nav";
 
 export const CustomRoutes = () => {
   return (
     <BrowserRouter>
-      <Box px={10} py={3}>
-        <Routes>
-          <Route path="/login" element={<Login />}></Route>
-          {/* <Route path="/" element={<PublicLayout />}>
-            <Route index element={<Login />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-          </Route> */}
-
-          {/* <Route path="/tag" element={<PrivateLayout />}>
-            <Route index element={<Home />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/list" element={<List />} />
-            <Route path="/create" element={<Create />} />
-          </Route> */}
-
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </Box>
-      <Footer />
+      <AuthProvider>
+          <Routes>
+            <Route path="/" element={<PublicLayout />}>
+              <Route index element={<Login />}></Route>
+              <Route path="login" element={<Login />}></Route>
+            </Route>
+            <Route path="/tag" element={<PrivateLayout />}>
+              <Route index element={<Home />} />
+              <Route path="" element={<Home />} />
+              <Route path="home" element={<Home />} />
+              <Route path="list" element={<List />} />
+              <Route path="create" element={<Create />} />
+            </Route>
+            <Route path="*" element={<Error />} />
+          </Routes>
+        <Footer />
+      </AuthProvider>
     </BrowserRouter>
   );
 };
