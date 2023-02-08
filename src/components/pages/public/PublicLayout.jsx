@@ -11,8 +11,8 @@ export const PublicLayout = () => {
   return (
     <>
       <Box px={10} py={3}>
-        {/* {Object.keys(auth).length === 0 ? <Outlet /> : <Navigate to="tag/" />} */}
-        {!auth ? <Outlet /> : <Navigate to="/tag" />}
+        {Object.keys(auth).length === 0 ? <Outlet /> : <Navigate to="tag/" />}
+        {/* {!auth ? <Outlet /> : <Navigate to="/tag" />} */}
       </Box>
     </>
   );

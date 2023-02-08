@@ -131,7 +131,9 @@ export const Nav = () => {
               Username
             </MenuButton>
             <MenuList>
-              <MenuItem>Logout</MenuItem>
+              <NavLink to="/tag/logout">
+                <MenuItem>Logout</MenuItem>
+              </NavLink>
             </MenuList>
           </Menu>
         </Stack>

@@ -12,16 +12,16 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const authUser = async () => {
-    //TODO: REVEER ESTO
-    // const user = localStorage.getItem("user");
-    // const userObj = JSON.parse(user);
-    // if (!user) {
-    //   setLoading(false);
-    //   return false;
-    // } else {
-    //   setAuth(userObj);
-    //   setLoading(false);
-    // }
+    //TODO: No me funcionan los endpoints, no me toma que estoy logueado
+    const user = localStorage.getItem("user");
+    const userObj = JSON.parse(user);
+    if (!user) {
+      setLoading(false);
+      return false;
+    } else {
+      setAuth(userObj);
+      setLoading(false);
+    }
 
     // const user = localStorage.getItem("user");
     // if (!user) {

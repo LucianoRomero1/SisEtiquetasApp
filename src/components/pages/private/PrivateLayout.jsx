@@ -15,8 +15,8 @@ export const PrivateLayout = () => {
         <Nav />
         <Box px={10} py={3}>
           <Header />
-          {/* {Object.keys(auth).length !== 0 ? <Outlet /> : <Navigate to="tag/" />} */}
-          {auth ? <Outlet /> : <Navigate to="/login" />}
+          {Object.keys(auth).length !== 0 ? <Outlet /> : <Navigate to="tag/" />}
+          {/* {auth ? <Outlet /> : <Navigate to="/login" />} */}
         </Box>
       </>
     );

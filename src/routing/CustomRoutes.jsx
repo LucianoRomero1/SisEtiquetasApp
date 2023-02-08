@@ -11,6 +11,7 @@ import { PublicLayout } from "../components/pages/public/PublicLayout";
 import { PrivateLayout } from "../components/pages/private/PrivateLayout";
 import { AuthProvider } from "../context/AuthProvider";
 import { Nav } from "../components/layout/Nav";
+import { Logout } from "../components/pages/private/Logout";
 
 export const CustomRoutes = () => {
   return (
@@ -27,6 +28,7 @@ export const CustomRoutes = () => {
               <Route path="home" element={<Home />} />
               <Route path="list" element={<List />} />
               <Route path="create" element={<Create />} />
+              <Route path="logout" element={<Logout />} />
             </Route>
             <Route path="*" element={<Error />} />
           </Routes>
